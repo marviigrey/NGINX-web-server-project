@@ -7,7 +7,7 @@
     <h1>Welcome to My Dynamic Web Page</h1>
     <?php
       // This is a PHP code block that generates dynamic content
-      $username = "John";
+      $username = "Marviigrey";
       $greeting = "Hello, $username!";
 
       echo "<p>$greeting</p>";
