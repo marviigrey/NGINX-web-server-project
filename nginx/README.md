@@ -44,3 +44,15 @@ server_name — Defines which domain names and/or IP addresses this server block
 location / — The first location block includes a try_files directive, which checks for the existence of files or directories matching a URI request. If Nginx cannot find the appropriate resource, it will return a 404 error.
 location ~ \.php$ — This location block handles the actual PHP processing by pointing Nginx to the fastcgi-php.conf configuration file and the php7.4-fpm.sock file, which declares what socket is associated with php-fpm.
 location ~ /\.ht — The last location block deals with .htaccess files, which Nginx does not process. By adding the deny all directive, if any .htaccess files happen to find their way into the document root ,they will not be served to visitors.
+
+Activate your configuration by linking to the config file from Nginx’s sites-enabled directory:
+sudo ln -s /etc/nginx/sites-available/lemp /etc/nginx/sites-enabled/
+
+The above command tells nginx to use this configuration file next time,also we will need to disable the default config file in use.
+
+    sudo unlink /etc/nginx/sites-enabled/default
+
+    sudo systemctl reload nginx
+
+Next,we need to create an index.html filein our /var/www/lemp directory,this will be the page to be displayed on our website.
+
