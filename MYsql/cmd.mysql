@@ -1,0 +1,17 @@
+CREATE DATABASE `example_database`;
+CREATE USER 'marviigrey'@'%' IDENTIFIED WITH mysql_native_password BY 't8Gh%KpL#zN@4';
+GRANT ALL ON example_database.* TO 'marviigrey'@'%';
+exit
+mysql -u marviigrey -p
+#input the password
+ SHOW DATABASES;
+ #database shown
+CREATE TABLE example_database.todo_list (
+>     item_id INT AUTO_INCREMENT,
+>     content VARCHAR(255),
+>     PRIMARY KEY(item_id)
+>);
+INSERT INTO example_database.todo_list (content) VALUES ("My first important item");
+SELECT * FROM example_database.todo_list;
+exit
+#add the todo_list.php file in the php directory into /var/www/lemp directory and view it in the http://<ip_addr>/todo_php:80
