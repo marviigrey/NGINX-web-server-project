@@ -55,4 +55,6 @@ The above command tells nginx to use this configuration file next time,also we w
     sudo systemctl reload nginx
 
 Next,we need to create an index.html filein our /var/www/lemp directory,this will be the page to be displayed on our website.
-
+add the index.php into the /var/www/lemp directory to display our php page.
+To view the default page which is our index.html just use http://<ip-addr>:80
+but for the php use  http://<ip-addr>/index.php toview the php page.
